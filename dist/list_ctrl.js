@@ -84,7 +84,6 @@ System.register(['app/plugins/sdk', 'lodash', './css/list-panel.css!'], function
           _this.events.on('panel-teardown', _this.onPanelTeardown.bind(_this));
           _this.events.on('panel-initialized', _this.render.bind(_this));
 
-          // this.updateClock();
           return _this;
         }
 
