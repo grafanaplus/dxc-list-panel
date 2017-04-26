@@ -19,17 +19,18 @@
   justify-content: space-between;
   align-items: stretch;
   flex: auto;
-  margin: 6px 0;
   min-height: 100px;
   overflow: auto;
 }
 
 .list-panel-row .list-card {
   flex-direction: column;
+  margin: 0 6px;
 }
 
 .list-panel-col .list-card {
   flex-direction: row;
+  margin: 6px 0;
 }
 
 .list-title {
@@ -73,10 +74,26 @@
   overflow: auto;
 }
 
+.list-panel-row .list-body {
+  padding: 0;
+}
+
+.list-panel-col .list-body {
+  padding: 12px 0;
+}
+
 .list-item {
   padding-left: 60px;
   list-style-position: inside;
   font-size: 1.1rem;
+}
+
+.list-panel-row .list-item {
+  padding: 0 10px;
+}
+
+.list-panel-col .list-item {
+  padding-left: 60px;
 }
 
 .list-item:nth-child(odd) {

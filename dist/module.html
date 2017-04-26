@@ -1,10 +1,10 @@
 <div ng-class="{true:'list-panel-row',false:'list-panel-col'}[ctrl.panel.IS_ROW]" ng-style="{height: ctrl.height}">
   <div class="list-card" ng-repeat="card in ctrl.panel.cards">
-    <div class="list-title" style="color:{{card.color}};">
+    <div class="list-title" ng-style="{color:card.color};">
       <span class="list-text">{{card.title}}</span>
     </div>
-    <ol class="list-body">
-      <li class="list-item" ng-repeat="item in card.items">{{item.value}}</li>
+    <ol class="list-body" ng-style="{'list-style-type': card.type};">
+      <li class="list-item" ng-repeat="item in card.items" >{{item.value}}</li>
     </ol>
   </div>
 </div>

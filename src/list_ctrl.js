@@ -51,12 +51,9 @@ const panelDefaults = {
   cards: [
     {
       color: 'rgb(126,117,222)',
+      type: 'decimal',
       title: 'PLAN',
-      items: [
-        {value:'Have a meal'},
-        {value:'Go to bed'},
-        {value:'Back to the first'}
-      ]
+      items: []
     }
   ]
 };

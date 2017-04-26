@@ -1,11 +1,12 @@
 <div class="editor-row">
 	<div class="section gf-form-group">
-		<h5 class="section-heading">Layout</h5>
+		<h5 class="section-heading">List Options</h5>
+		<gf-form-switch class="gf-form" label="Layout" label-class="width-8" checked="ctrl.panel.IS_ROW" on-change="ctrl.render()"></gf-form-switch>
 	</div>
 </div>
 <div class="editor-row">
 	<div class="section gf-form-group">
-		<h5 class="section-heading">List Options</h5>
+		<h5 class="section-heading">Cards Options</h5>
 		<div class="gf-form-group" ng-repeat="card in ctrl.panel.cards" ng-init="outerIndex = $index">
 			<div class="gf-form">
 				<label class="gf-form-label width-4">Title</label>
@@ -15,6 +16,10 @@
 					<spectrum-picker ng-model="card.color" ng-change="ctrl.render()" ></spectrum-picker>
 				</span>
 				<input type="text" class="input-small gf-form-input width-10" ng-model="card.color" ng-change="ctrl.render()" ng-model-onblur />
+				<label class="gf-form-label">Item Type</label>
+				<div class="gf-form-select-wrapper max-width-10">
+					<select class="input-medium gf-form-input" ng-model="card.type" ng-options='t for t in ["none", "disc", "circle", "square", "decimal", "lower-alpha", "upper-alpha", "lower-roman", "upper-roman", "decimal-leading-zero"]' ng-change="ctrl.render()"></select>
+				</div>
 				<label class="gf-form-label"><i class="fa fa-trash pointer" ng-click="ctrl.removeCard(card)"></i></label>				
 			</div>
 			<div class="gf-form" style="flex-wrap:wrap;">
