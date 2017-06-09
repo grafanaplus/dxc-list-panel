@@ -99,7 +99,7 @@ System.register(['app/plugins/sdk', 'lodash', './css/list-panel.css!'], function
               color: 'rgb(20,70,181)',
               title: 'Card',
               items: [{
-                content: '',
+                value: '',
                 info: ''
               }]
             });
@@ -112,7 +112,7 @@ System.register(['app/plugins/sdk', 'lodash', './css/list-panel.css!'], function
         }, {
           key: 'addItem',
           value: function addItem(index) {
-            this.panel.cards[index].items.push({ content: '', info: '' });
+            this.panel.cards[index].items.push({ value: '', info: '' });
           }
         }, {
           key: 'removeItem',

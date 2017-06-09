@@ -30,7 +30,7 @@
 		<br>
 		<div class="gf-form" style="flex-wrap:wrap;" ng-repeat="item in card.items">
 			<label class="gf-form-label">Content</label>
-			<input type="text" class="input-small gf-form-input width-8" ng-model="item.content" ng-change="ctrl.render()" ng-model-onblur />
+			<input type="text" class="input-small gf-form-input width-8" ng-model="item.value" ng-change="ctrl.render()" ng-model-onblur />
 			<label class="gf-form-label">Info</label>
 			<input type="text" class="input-small gf-form-input width-8" ng-model="item.info" ng-change="ctrl.render()" ng-model-onblur />
 			<span class="gf-form-label">
