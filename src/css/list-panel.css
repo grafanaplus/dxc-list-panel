@@ -1,16 +1,15 @@
-.list-panel-row,
-.list-panel-col {
+.list-container {
   display: flex;
   justify-content: flex-start;
   align-items: stretch;
   overflow: auto;
 }
 
-.list-panel-row {
+.list-container-row {
   flex-direction: row;
 }
 
-.list-panel-col {
+.list-container-col {
   flex-direction: column;
 }
 
@@ -19,83 +18,76 @@
   justify-content: space-between;
   align-items: stretch;
   flex: auto;
-  min-height: 100px;
-  overflow: auto;
-}
-
-.list-panel-row .list-card {
   flex-direction: column;
-  margin: 0 6px;
+  margin: 6px;
+  border-radius: 6px;
+  min-height: 100px;
+  color: #e3e3e3;
+  overflow: auto;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, .5);
 }
 
-.list-panel-col .list-card {
-  flex-direction: row;
-  margin: 6px 0;
+.list-header {
+  flex: 0 0 48px;
+  position: relative;
+  margin-top: 4px;
+  border-radius: 6px 6px 0 0;
+  overflow: hidden;
 }
 
 .list-title {
-  flex: 0 0 60px;
-  position: relative;
-  overflow: hidden;
-  border-style: solid;
-}
-
-.list-panel-row .list-title {
-  margin-top: 4px;
-  box-shadow: 0 -4px 0;
-  border-width: 0 2px;
-  border-color: rgba(0, 0, 0, .5);
-}
-
-.list-panel-col .list-title {
-  margin-left: 4px;
-  box-shadow: -4px 0 0;
-  border-width: 2px 0;
-  border-color: rgba(0, 0, 0, .5);
-}
-
-.list-text {
   position: absolute;
   top: 50%;
   left: 0;
   transform: translate(0, -50%);
   width: 100%;
-  padding: 0 22px;
-  font-size: 1.2rem;
+  padding: 0 38px;
+  font-size: 1.4rem;
+  font-weight: bold;
   word-wrap: break-word;
-  text-align: center;
-  color: #D8D9DA;
+  /*text-align: center;*/
 }
 
 .list-body {
   flex: auto;
   padding: 12px 0;
-  border: 2px solid rgba(0, 0, 0, .5);
+  background: #292929;
   overflow: auto;
+  /*text-align: center;*/
 }
 
-.list-panel-row .list-body {
-  padding: 0;
-}
-
-.list-panel-col .list-body {
-  padding: 12px 0;
+.list-list {
+  display: inline-block;
+  text-align: initial;
 }
 
 .list-item {
-  padding-left: 60px;
-  list-style-position: inside;
+  position: relative;
+  padding: 11px 4px;
+  padding-left: 38px;
+}
+
+.list-content::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -22px;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50% 50%;
+  background: rgba(255,255,255,.3);
+}
+
+.list-content {
+  position: relative;
   font-size: 1.1rem;
 }
 
-.list-panel-row .list-item {
-  padding: 0 10px;
+.list-info {
+  color: #aaa;
 }
 
-.list-panel-col .list-item {
-  padding-left: 60px;
-}
-
-.list-item:nth-child(odd) {
+/*.list-item:nth-child(odd) {
   background: rgba(128, 128, 128, 0.1);
-}
+}*/

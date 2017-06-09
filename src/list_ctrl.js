@@ -1,17 +1,10 @@
-import {PanelCtrl} from 'app/plugins/sdk';
+import { PanelCtrl } from 'app/plugins/sdk';
 import _ from 'lodash';
 import './css/list-panel.css!';
 
 const panelDefaults = {
-  IS_ROW: false,
-  cards: [
-    {
-      color: 'rgb(126,117,222)',
-      type: 'decimal',
-      title: 'PLAN',
-      items: []
-    }
-  ]
+  IS_ROW: true,
+  cards: []
 };
 
 export class ListCtrl extends PanelCtrl {
@@ -35,12 +28,13 @@ export class ListCtrl extends PanelCtrl {
 
   addCard() {
     this.panel.cards.push({
-      color: 'rgb(126,117,222)',
-      title: 'PLAN',
+      color: 'rgb(20,70,181)',
+      title: 'Card',
       items: [
-        {value:'Have a meal'},
-        {value:'Go to bed'},
-        {value:'Back to the first'}
+        {
+          content: '',
+          info: ''
+        }
       ]
     });
   }
@@ -50,16 +44,17 @@ export class ListCtrl extends PanelCtrl {
   }
 
   addItem(index) {
-    this.panel.cards[index].items.push({value:''});
+    this.panel.cards[index].items.push({ content: '', info: '' });
   }
 
-  removeItem(index,item) {
+  removeItem(index, item) {
     this.panel.cards[index].items = _.without(this.panel.cards[index].items, item);
   }
 
   link(scope, elem) {
     this.events.on('render', () => {
-      const $panelContainer = elem.find('.panel-container');
+      const $panelContainer = elem.find('.list-container');
+      // this.panel.IS_ROW=this.panel.span>3.5?true:false;
     });
   }
 }

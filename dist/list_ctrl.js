@@ -61,13 +61,8 @@ System.register(['app/plugins/sdk', 'lodash', './css/list-panel.css!'], function
       }();
 
       panelDefaults = {
-        IS_ROW: false,
-        cards: [{
-          color: 'rgb(126,117,222)',
-          type: 'decimal',
-          title: 'PLAN',
-          items: []
-        }]
+        IS_ROW: true,
+        cards: []
       };
 
       _export('ListCtrl', ListCtrl = function (_PanelCtrl) {
@@ -101,9 +96,12 @@ System.register(['app/plugins/sdk', 'lodash', './css/list-panel.css!'], function
           key: 'addCard',
           value: function addCard() {
             this.panel.cards.push({
-              color: 'rgb(126,117,222)',
-              title: 'PLAN',
-              items: [{ value: 'Have a meal' }, { value: 'Go to bed' }, { value: 'Back to the first' }]
+              color: 'rgb(20,70,181)',
+              title: 'Card',
+              items: [{
+                content: '',
+                info: ''
+              }]
             });
           }
         }, {
@@ -114,7 +112,7 @@ System.register(['app/plugins/sdk', 'lodash', './css/list-panel.css!'], function
         }, {
           key: 'addItem',
           value: function addItem(index) {
-            this.panel.cards[index].items.push({ value: '' });
+            this.panel.cards[index].items.push({ content: '', info: '' });
           }
         }, {
           key: 'removeItem',
@@ -125,7 +123,8 @@ System.register(['app/plugins/sdk', 'lodash', './css/list-panel.css!'], function
           key: 'link',
           value: function link(scope, elem) {
             this.events.on('render', function () {
-              var $panelContainer = elem.find('.panel-container');
+              var $panelContainer = elem.find('.list-container');
+              // this.panel.IS_ROW=this.panel.span>3.5?true:false;
             });
           }
         }]);
