@@ -32,7 +32,7 @@ export class ListCtrl extends PanelCtrl {
       title: 'Card',
       items: [
         {
-          content: '',
+          value: '',
           info: ''
         }
       ]
@@ -44,7 +44,7 @@ export class ListCtrl extends PanelCtrl {
   }
 
   addItem(index) {
-    this.panel.cards[index].items.push({ content: '', info: '' });
+    this.panel.cards[index].items.push({ value: '', info: '' });
   }
 
   removeItem(index, item) {
