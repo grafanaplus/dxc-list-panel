@@ -1,7 +1,7 @@
 {
   "type": "panel",
-  "name": "List",
-  "id": "grafana-list-panel",
+  "name": "卡片",
+  "id": "dxc-list-panel",
 
   "info": {
     "description": "List Panel Plugin for Grafana",

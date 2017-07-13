@@ -85,7 +85,7 @@ System.register(['app/plugins/sdk', 'lodash', './css/list-panel.css!'], function
         _createClass(ListCtrl, [{
           key: 'onInitEditMode',
           value: function onInitEditMode() {
-            this.addEditorTab('Options', 'public/plugins/grafana-list-panel/editor.html', 2);
+            this.addEditorTab('Options', 'public/plugins/dxc-list-panel/editor.html', 2);
           }
         }, {
           key: 'onPanelTeardown',

@@ -19,7 +19,7 @@ export class ListCtrl extends PanelCtrl {
   }
 
   onInitEditMode() {
-    this.addEditorTab('Options', 'public/plugins/grafana-list-panel/editor.html', 2);
+    this.addEditorTab('Options', 'public/plugins/dxc-list-panel/editor.html', 2);
   }
 
   onPanelTeardown() {

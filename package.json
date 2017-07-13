@@ -1,5 +1,5 @@
 {
-  "name": "grafana-list-panel",
+  "name": "dxc-list-panel",
   "version": "1.0.0",
   "description": "List Panel Plugin for Grafana",
   "main": "src/module.js",
